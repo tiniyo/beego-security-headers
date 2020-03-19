@@ -45,5 +45,6 @@ func Finish(ctx *context.Context) {
 
 func Init() {
     beego.InsertFilter("/*", beego.BeforeExec, Finish, false)
+    beego.InsertFilter("/*", beego.BeforeStatic, Finish, false)
 }
 
